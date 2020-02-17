@@ -236,6 +236,7 @@ footer img {
 	header {
 		background-image: url(../images/header-mobile.jpg);
 		background-repeat: no-repeat;
+		background-size: 575px 255px;
 		width: 575px;
 		height: 255px;
 		background-position: center center;
