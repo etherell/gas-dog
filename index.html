@@ -1,196 +1,282 @@
 <!DOCTYPE html>
 <html>
+<!--Шапка страницы -->
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1" />
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 575px)" href="css/style-mobile.css">
 		<link href="https://fonts.googleapis.com/css?family=Roh3oto:400,700&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" srs="JS/jquery.js"></script>
 		<title>Поменяй собаку на газ по выгодной цене</title>
 	</head>
 
+<!--Тело страницы -->
+
 	<body>
-		<header>
-			<div class="top">
-			<img class="logo" src="images/logo.png" alt="logo">
-			<nav class="menu">
-				<a href="#">Контакты</a>
-				<a href="#">О нас</a>
-				<a href="#">Калькулятор</a>
-				<a href="#">Главная</a>
-				<a href="#">Блог</a>
-			</nav>
-			</div>
-			<nav class="menu-mobile">
-						<input type="checkbox" id="menu-button">
-		        		<label for="menu-button"/ class="menu-icon"></label>
-		        		<span class="menu-links">
-		        			<a href="#">Контакты</a>
-							<a href="#">О нас</a>
-							<a href="#">Калькулятор</a>
-							<a href="#">Главная</a>
-							<a href="#">Блог</a>
-						</span>	
-			</nav>
 
+	<!-- Шапка сайта -->
+		<header class="header">
+			<div class="container">
+				<div class="header__body">
+						<!-- Размещение логотипа -->
+						<div class="header__logo">
+						<a href="#">
+							<img src="images/logo.png" alt="logo">
+						</a>
+						</div>
+						<!-- Заготовка под бургер -->
+						<div class="header__burger">
+							<span></span>
+						</div>
+
+						<!-- Меню -->
+						<nav class="header__menu">
+							<ul class="header__list">
+								<li><a class="header__link" href="#advent">Преимущества	</a></li>
+								<li><a class="header__link" href="#calc">Калькулятор</a></li>
+								<li><a class="header__link" href="#payment">Оплата</a></li>
+								<li><a class="header__link" href="#">Отзывы</a></li>
+								<li><a class="header__link" href="#contact">Контакты</a></li>
+							</ul>
+						</nav>
+				</div>
+			</div>
 		</header>
-		<section class="text">
-		<div>
-			<h1>А ты уже заплатил за газ?</h1>
-			<p>Мы - первый в Украине сервис, при помощи которого вы можете<br>оплатить коммунальные услуги продав или обменяв на газ вашего питомца.</p>
-		</div>
-		</section>
-		<div class="advantages">
-			<h2>Наши преимущества</h2>
-			<div class="row-1">
-				<figure align="center">
-					<h3>Честная оценка</h3>
-					<img class="adv" width="89px" src="images/advantage-1.jpg">
-					<figcaption>Вы получите наилучшую <br>
-					цену за своего питомца</figcaption>
-				</figure>
 
-				<figure align="center">
-					<h3>Прямая оплата</h3>
-					<img class="adv" width="109px" src="images/advantage-2.jpg">
-					<figcaption>Переводим оплату<br> непосредственно поставщику <br>
-					коммунальных услуг</figcaption>
-				</figure>
+<!-- Добавление баннера -->
+	<div class="banner">
+				<div class="banner__container">
+						<img src="images/header.jpg" class="banner__picture">
+				</div>	
+	</div>
 
-				<figure align="center">
-					<h3>Отслеживание</h3>
-					<img class="adv" width="141px" src="images/advantage-3.jpg">
-					<figcaption>Отслеживайте в приложеии <br> местонахождение Вашего<br>
-					питомца после продажи</figcaption>
-				</figure>
-
-				<figure align="center">
-					<h3>Курьер</h3>
-					<img class="adv" width="136px" src="images/advantage-4.jpg">
-					<figcaption>При необходимости<br>
-					к Вам приедет наш курьер</figcaption>
-				</figure>
-
-				<figure align="center">
-					<h3>Все породы</h3>
-					<img class="adv" width="92px" src="images/advantage-5.jpg">
-					<figcaption>К оплате принимаются<br>
-					все породы собак</figcaption>
-				</figure>
-
-				<figure align="center">
-					<h3>Возврат</h3>
-					<img class="adv" width="114px" src="images/advantage-6.jpg">
-					<figcaption>Вы можете вернуть себе<br>
-					собаку в течении 14 дней</figcaption>
-				</figure>
+<!-- Вступление -->
+		<div class="introduction">
+			<div class="introduction__container">
+				<h1 class="introduction__title">А ты уже заплатил за газ?</h1>
+				<p>Мы - первый в Украине сервис, при помощи которого вы можете оплатить коммунальные услуги продав или обменяв на газ вашего питомца.</p>
 			</div>
 		</div>
 
-			<h2>Калькулятор рассчета стоимости</h2>
-			
-			<div class="list">
+<!-- Преимущества -->
+		<div class="advantages" id="advent">
+			<div class="advantages__title title-h3">Наши преимущества</div>
+			<div class="advantages__wrapper">
+					<figure class="advantages__figure">
+						<h3>Честная оценка</h3>
+						<img class="advantages__image" src="images/advantage-1.jpg">
+						<figcaption>Вы получите наилучшую <br>
+						цену за своего питомца</figcaption>
+					</figure>
 
-				<div class="select">
+					<figure class="advantages__figure">
+						<h3>Прямая оплата</h3>
+						<img class="advantages__image" src="images/advantage-2.jpg">
+						<figcaption>Переводим оплату<br> непосредственно поставщику <br>
+						коммунальных услуг</figcaption>
+					</figure>
+
+					<figure class="advantages__figure">
+						<h3>Отслеживание</h3>
+						<img class="advantages__image" src="images/advantage-3.jpg">
+						<figcaption>Отслеживайте в приложеии <br> местонахождение Вашего<br>
+						питомца после продажи</figcaption>
+					</figure>
+
+					<figure class="advantages__figure">
+						<h3>Курьер</h3>
+						<img class="advantages__image" src="images/advantage-4.jpg">
+						<figcaption>При необходимости<br>
+						к Вам приедет наш курьер</figcaption>
+					</figure>
+
+					<figure class="advantages__figure">
+						<h3>Все породы</h3>
+						<img class="advantages__image" src="images/advantage-5.jpg">
+						<figcaption>К оплате принимаются<br>
+						все породы собак</figcaption>
+					</figure>
+
+					<figure class="advantages__figure">
+						<h3>Возврат</h3>
+						<img class="advantages__image" src="images/advantage-6.jpg">
+						<figcaption>Вы можете вернуть себе<br>
+						собаку в течении 14 дней</figcaption>
+					</figure>
+			</div>
+		</div>
+
+<!-- Калькулятор -->
+	
+	<h2 id="calc" class="calculator__title title-h3">Калькулятор рассчета стоимости</h2>
+	<div class="calculator">
+
+<!-- Выпадающие списки -->			
+			<div class="calculator__options">
+					<div class="calculator__select">
 						<h3 class="str">Возраст</h3>
-						<select class="sel">
-							<option>0 лет</option>
-							<option>5 лет</option>
-							<option>10 лет</option>
-						</select>
-				</div>
-				<div class="select">
+						<div class="calculator__select_unit">
+							<select class="sel" id="age">
+								<option value="5">5 лет</option>
+								<option value="10">10 лет</option>
+								<option value="15">15 лет</option>
+							</select>
+						</div>
+					</div>
+					<div class="calculator__select">
 						<h3 class="str">Порода</h3>
-						<select class="sel">
-							<option>дворняга</option>
-							<option>пудель</option>
-							<option>мопс</option>
-						</select>
-				</div>
-				<div class="select">
+						<div class="calculator__select_unit">
+							<select class="sel" id="breed">
+								<option value="1">Дворняга</option>
+								<option value="2">Пудель</option>
+								<option value="3">Мопс</option>
+							</select>
+						</div>
+					</div>
+					<div class="calculator__select">
 						<h3 class="str">Вес</h3>
-						<select class="sel">
-							<option>5 кг</option>
-							<option>10 кг</option>
-							<option>15 кг</option>
-						</select>
-				</div>
-				<div class="select">
-						<h3 class="str">Пол</h3>
-						<select class="sel">
-							<option>кабель</option>
-							<option>сука</option>
-						</select>
-				</div>
-				<div class="select">
+						<div class="calculator__select_unit">
+							<select class="sel" id="weight">
+								<option value="5">5 кг</option>
+								<option value="10">10 кг</option>
+								<option value="15">15 кг</option>
+							</select>
+						</div>
+					</div>
+					<div class="calculator__select">
 						<h3 class="str">Родословная</h3>
-						<select class="sel">
-							<option>есть</option>
-							<option>нет</option>
-						</select>
+						<div class="calculator__select_unit">
+							<select class="sel" id="pedigree">
+								<option value="1">Есть</option>
+								<option value="2">Нет</option>
+							</select>
+						</div>
+					</div>
+					<div class="calculator__select">
+						<h3 class="str">Пол</h3>
+						<div class="calculator__select_unit">
+							<select class="sel" id="sex">
+								<option value="1">Кабель</option>
+								<option value="2">Сука</option>
+							</select>
+						</div>
+					</div>
+			</div>
+
+<!-- Чекбокс -->
+			<h3 class="calculator__checkbox_title">Прививки</h3>
+				<div class="calculator__checkbox">
+					<label class="calculator__checkbox_label" >
+						<input type="checkbox" class="calculator__checkbox_unit" id="plague">
+						<span class="calculator__checkbox_fake"></span>
+						<span class="calculator__checkbox_text">Чума</span>
+					</label>
+					<label class="calculator__checkbox_label">
+						<input type="checkbox" class="calculator__checkbox_unit" id="rabies">
+						<span class="calculator__checkbox_fake"></span>
+						<span class="calculator__checkbox_text">Бешенство</span>
+					</label>
+					<label class="calculator__checkbox_label">
+						<input type="checkbox" class="calculator__checkbox_unit" id="enteritis">
+						<span class="calculator__checkbox_fake"></span>
+						<span class="calculator__checkbox_text">Энтерит</span>
+					</label>
+					<label class="calculator__checkbox_label">
+						<input type="checkbox" class="calculator__checkbox_unit" id="parainfluenza">
+						<span class="calculator__checkbox_fake"></span>
+						<span class="calculator__checkbox_text">Парагрипп</span>
+					</label>
+					<label class="calculator__checkbox_label">
+						<input type="checkbox" class="calculator__checkbox_unit" id="hepatitis">
+						<span class="calculator__checkbox_fake"></span>
+						<span class="calculator__checkbox_text">Гепатит</span>
+					</label>
+					<label class="calculator__checkbox_label">
+						<input type="checkbox" class="calculator__checkbox_unit" id="leptospirosis">
+						<span class="calculator__checkbox_fake"></span>
+						<span class="calculator__checkbox_text">Лептоспироз</span>
+					</label>
 				</div>
-			</div>
 
-			<h3 align="center">Прививки</h3>
-			<div class="checkbox">
-				<input type="checkbox" name="Чума"><div class="check">Чума</div>
-				<input type="checkbox" name="Бешенство"><div class="check">Бешенство</div>
-				<input type="checkbox" name="Энтерит"><div class="check">Энтерит</div>
-				<input type="checkbox" name="Энтерит"><div class="check">Энтерит</div>
-				<input type="checkbox" name="Энтерит"><div class="check">Парагрипп</div>	
-				<input type="checkbox" name="Энтерит"><div class="check">Гепатит</div>
-			</div>
-			
-			<section align="center">
-				<button class="estim">Рассчитать</button><br>
-				<img class="dog" src="images/estimate.png" width="162px">
-			</section>
+<!-- Кнопка расчёта -->
+				<section align="center">
+					<button class="estim" id="btn">Рассчитать</button><br>
+					<p id="res"></p>
+				</section>
+	</div>
 
-			<h2>Процедура оплаты</h2>
+	<div class="dog__picture">
+		<img class="dog" src="images/estimate.png" width="162px">
+	</div>
 
-		<div class="steps">
-			<img src="images/step-1.png">
-			<img src="images/next.png">
-			<img src="images/step-2.png">
-			<img src="images/next.png">
-			<img src="images/step-3.png">
-			<img src="images/next.png">
-			<img src="images/step-4.png">
-			<img src="images/next.png">
-			<img src="images/step-5.png">
+<!-- Процедура оплаты -->
+		<h2 id="payment" class="payment__title title-h3">Процедура оплаты</h2>
+
+		<div class="payment">
+			<div class="payment__option"><img src="images/step-1.png">Заполняете форму</div>
+			<div class="payment__arrow"><img src="images/next.png"></div>
+			<div class="payment__option"><img src="images/step-2.png">Получаете адрес для доставки собаки</div>
+			<div class="payment__arrow"><img src="images/next.png"></div>
+			<div class="payment__option"><img src="images/step-3.png">Привозите Вашего питомца</div>
+			<div class="payment__arrow"><img src="images/next.png"></div>
+			<div class="payment__option"><img src="images/step-4.png">Получаете квитанцию об оплате</div>
+			<div class="payment__arrow"><img src="images/next.png"></div>
+			<div class="payment__option"><img src="images/step-5.png">Радуетесь теплу</div>
 		</div>
 
-			<h2 class="header">Остались вопросы? Пишите нам</h2>
-
+<!-- Контактная форма -->
 		<div class="form">
-			<label><b>Имя </b><input type="text" required></label><br>
-	 		<label><b>E-mail </b><input type="email" required></label><br>
-	 		<label><b>Телефон </b><input type="tel" required></label><br>
-	 		<p><input class="submit" type="submit"></p>
+			<h2 class="form__title">Остались вопросы?<br> Пишите нам</h2>
+				<div class="form__group">
+						<input class="form__input" type="text" required id="form-input-1">
+						<label class="rorm__label">Имя</label>
+			 	</div>
+			 	<div class="form__group">
+						<input class="form__input" type="email" required id="form-input-2">
+						<label class="rorm__label">Email</label>
+			 	</div>
+			 	<div class="form__group">
+						<input class="form__input" type="text" required id="form-input-3">
+						<label class="rorm__label">Сообщение</label>
+			 	</div>
+			 	<div class="form__button_container">
+			 		<button type="button" class="btn btn-primary form__button" data-toggle="modal" data-target="#exampleModal" id="form-button">Отправить</button>
+			 	</div>
 	 	</div>
 
-	 <img class="heart" src="images/hearts.jpg">
+<!-- Модальное окно -->
+
+
+<!-- Отзывы -->
 
 	
 
+<!-- Рейтинг -->
+
+
+	
+<!-- Подвал -->
+
 	 <div class="footer">
 		 <footer>
-		 		<span class="contacts">
+		 	<div class="footer__contacts" id="contact">
 		 		<h3>Контактная информация</h3>
 		 		<p><img src="images/icon-1.png"> г. Киев, ул. Ольжича 43</p>
 		 		<p><img src="images/icon-2.png"> тел. 0637772233</p>
 		 		<p><img src="images/icon-3.png"> gazzasobaku@gmail.com</p>
-					</span>
-					<nav class="menu-2">
-					<a href="#">Контакты</a>
-					<a href="#">О нас</a>
-					<a href="#">Калькулятор</a>
-					<a href="#">Главная</a>
-					<a href="#">Блог</a>
-				</nav>	
+			</div>
+
+			<div class="footer__banner">
+						<div class="footer__banner_container">
+								<img src="images/footer.jpg" class="footer__banner_picture">
+						</div>	
+			</div>
+
 		 </footer>
 	 </div>
-
+	 
+	 <script type="text/javascript" src="JS/javascript.js"></script>
 	</body>
 </html>
