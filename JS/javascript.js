@@ -1,12 +1,12 @@
 
 // Выпадающее меню
 $('document').ready(function () {
-	$('.header__burger').click(function(event) {
+	$('.header__burger, .header__link').click(function(event) {
 		$('.header__burger, .header__menu').toggleClass('active');
 	})
 })
 
-console.log("hello")
+
 
 
 // Калькулятор 
@@ -22,6 +22,7 @@ console.log("hello")
 	var leptospirosis 	= document.querySelector('#leptospirosis[type=checkbox]')
 
 	//Проверяем возраст
+
 			if (age.value === "5") {
 				result += 100;
 			} else if (age.value === "10") {
@@ -64,66 +65,69 @@ console.log("hello")
 		console.log(result);
 
 	//Чекбоксы
-		if (plague.checked) {
-				result += 50;
-			} else {
-				result -= 20;
-			}
-		console.log(result);
+	function checked(name, res1, res2) {
+		if (name.checked) {
+			result += res1;
+		} else {
+			result -= res2;
+		}
+	};
 
-		if (rabies.checked) {
-				result += 30;
-			} else {
-				result -= 30;
-			}
-		console.log(result);
-
-		if (enteritis.checked) {
-				result += 50;
-			} else {
-				result -= 30;
-			}
-		console.log(result);
-
-		if (parainfluenza.checked) {
-				result += 70;
-			} else {
-				result -= 40;
-			}
-		console.log(result);
-
-		if (hepatitis.checked) {
-				result += 45;
-			} else {
-				result -= 25;
-			}
-		console.log(result);
-
-		if (leptospirosis.checked) {
-				result += 40;
-			} else {
-				result -= 30;
-			}
-		console.log(result);
+	checked(plague, 50, 20);
+	checked(rabies, 30, 30);
+	checked(enteritis, 50, 30);
+	checked(parainfluenza, 70, 40);
+	checked(hepatitis, 45, 25);
+	checked(leptospirosis, 40, 30);
 
 	res.classList.add('estimate');
 	res.innerHTML = 'Ваш питомец стоит: ' + result + ' грн';
-	});
+	}); 
 
-
-//Очищаем поля ввода
-
-
+// Очищаем поля ввода
 document.getElementById("form-button").onclick = function(e) {
 	 document.getElementById("form-input-1").value = "";
 	 document.getElementById("form-input-2").value = "";
 	 document.getElementById("form-input-3").value = "";
 }
 
+// Инициализация слайдера
+$(document).ready(function(){
+	$('.testimonials__slider').slick({
+	  	prevArrow: '<button class="prev"></button>',
+	  	nextArrow: '<button class="next"></button>',
+	  	infinite: true,
+	  	arrows: true,
+	  	adaptiveHeight: true
+	  	});
+	});
 
+// Вывод всплвающего окна
+$(document).ready(function(){
+	$('.form__btn').on('click', function(event) {
+		event.preventDefault();
+		$('.form__background').fadeIn();
+	});
+	$('.form__close').on('click', function(event) {
+		event.preventDefault();
+		$('.form__background').fadeOut();
+	});
+	$('.form__button').on('click', function(event) {
+		event.preventDefault();
+		$('.form__background').fadeOut();
+	});
+	});
 
-/* var age = document.querySelector('.age');
-var breed = document.querySelector('.breed');
-var eight = document.querySelector('.weight');
-var sex = document.querySelector('.sex');
-var pedigree = document.querySelector('.pedigree'); */
+// Плавная прокрутка
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for(let anchor of anchors) {
+	anchor.addEventListener("click", function(event) {
+	event.preventDefault();
+	const blockID = anchor.getAttribute('href');
+	document.querySelector('' + blockID).scrollIntoView({
+		behavior: "smooth",
+		block: "center"
+	});
+})
+}
