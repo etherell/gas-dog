@@ -85,8 +85,18 @@ body {
 
 .header__link {
 	color: #fff;
-	text-transform: capitalize;
 	text-decoration: none;
+}
+
+.header__list a:hover {
+		border-bottom: 1px solid white;
+}
+
+.form__btn {
+	background-color: #450056;
+	padding: 5px;
+	border-radius: 10px;
+	box-shadow: 1px 2px 2px #0C0C0C;
 }
 
 
@@ -96,6 +106,7 @@ body {
 	text-align: center;
 	max-width: 1366px;
 	padding-top: 30px;
+	text-align: center;
 }
 
 .banner__picture {
@@ -333,8 +344,22 @@ body {
 	text-align: center;
 }
 
-.header__list a:hover {
-		border: 2px solid white;
+
+
+/* Оформление слайдера */
+.slider {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+}
+
+.slider__title {
+	text-align: center;
+}
+
+.slider .fotorama__dot {
+	border: 1px solid #033076;
 }
 
 /* Оформление формы контактов */
@@ -342,12 +367,18 @@ body {
 .form {
 	margin: 0 auto;
 	margin-top: 30px;
-	max-width: 300px;
+	width: 300px;
 	padding: 32px;
 	border-radius: 10px;
 	box-shadow: 0 4px 16px #ccc;
 	font-family: inherit;
 	letter-spacing: 1px;
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 15%;
+	background-color: #fff;
+	z-index: 99;
 }
 
 .form__input,
@@ -404,31 +435,106 @@ body {
 	box-shadow: 0 3px 3px #4d4d4d;
 }
 
-/* Оформление модального окна */
-.btn-secondary {
+.form__close {
+	position: absolute;
+	top: 0;
+	right: -2rem;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+}
+
+.form__background {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	botoom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+	background-color: rgba(0, 0, 0, 0.5);
 
 }
+
 
 /* Слайдер отзывов */
 
 
+.testimonials__header {
+	text-align: center;
+}
 
+.testimonials__slider {
+	max-width: 450px;
+	text-align: center;
+	margin: 0 auto;
+}
 
-/* Оформление рейтинга */
+.testimonials__block img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 50%;
+}
 
+.slick-active {
+	outline: none;
+}
+
+.prev {
+	position: absolute;
+	top: 40%;
+	left: 0;
+	transition: translateY(-50%);
+	z-index: 4;
+	width: 2rem;
+	height: 2rem;
+	border: none;
+	background: url(../images/prev.png);
+}
+
+.next {
+	position: absolute;
+	top: 40%;
+	right: 0;
+	transition: translateY(-50%);
+	z-index: 4;
+	width: 2rem;
+	height: 2rem;
+	border: none;
+	background: url(../images/nex.png);
+}
+
+/* Кнопка связи */
+.contact__block {
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+}
+
+.contact__block h2 {
+	line-height: 110%;
+}
+
+.contact__btn {
+	color: white;
+	padding: 7px;
+}
 
 /* Оформление футера */
 
 .footer {
 	position: relative;
-	padding-top: 0px;
+	margin-top: 0px;
+	line-height: 0.8rem;
 }
 
 .footer__banner {
 	margin: 0px auto;
 	text-align: center;
 	max-width: 1366px;
-	padding-top: 30px;
+	margin-top: 30px;
 }
 
 .footer__banner_picture {
@@ -443,6 +549,22 @@ body {
 	left: 30%;
 	bottom: 20%;
 	line-height: 14px;
+}
+
+/* Общие стили */
+button, select, .form__btn, .calculator__checkbox_fake:hover {
+	cursor: pointer;
+}
+
+/* Стрелка вверх */
+.arrow {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	background-color: #033076;
+	padding: 3px 5px 0 5px;
+	border-radius: 5px;
+	z-index: 2;
 }
 
 /* Медиа для планшетов и телефонов*/
@@ -500,8 +622,8 @@ body {
 		position: fixed;
 		top: -110%;
 		right: 0;
-		width: 190px;
-		height: 225px;
+		width: 215px;
+		height: 277px;
 		background-color: #060058;
 		padding: 60px 0px 0px 0px;
 		transition: all 0.3s ease 0s;
@@ -544,4 +666,15 @@ body {
 	max-height: 12px;
 }
 
+/* Модальное окно */
+.form {
+	width: 200px;
+}
+}
+
+@media (max-width: 350px) {
+
+.arrow {
+	display: none;
+}
 }
