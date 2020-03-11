@@ -7,6 +7,8 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Roh3oto:400,700&display=swap" rel="stylesheet">
+		<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<script type="text/javascript" srs="JS/jquery.js"></script>
 		<title>Поменяй собаку на газ по выгодной цене</title>
@@ -22,7 +24,7 @@
 				<div class="header__body">
 						<!-- Размещение логотипа -->
 						<div class="header__logo">
-						<a href="#">
+						<a href="#up">
 							<img src="images/logo.png" alt="logo">
 						</a>
 						</div>
@@ -37,8 +39,9 @@
 								<li><a class="header__link" href="#advent">Преимущества	</a></li>
 								<li><a class="header__link" href="#calc">Калькулятор</a></li>
 								<li><a class="header__link" href="#payment">Оплата</a></li>
-								<li><a class="header__link" href="#">Отзывы</a></li>
-								<li><a class="header__link" href="#contact">Контакты</a></li>
+								<li><a class="header__link" href="#portfolio">Портфолио</a></li>
+								<li><a class="header__link" href="#testimonials">Отзывы</a></li>
+								<li><a class="header__link form__btn">Оставить заявку</a></li>
 							</ul>
 						</nav>
 				</div>
@@ -46,12 +49,12 @@
 		</header>
 
 <!-- Добавление баннера -->
-	<div class="banner">
+	<div class="banner" id="up">
 				<div class="banner__container">
 						<img src="images/header.jpg" class="banner__picture">
 				</div>	
 	</div>
-
+		
 <!-- Вступление -->
 		<div class="introduction">
 			<div class="introduction__container">
@@ -110,11 +113,11 @@
 
 <!-- Калькулятор -->
 	
-	<h2 id="calc" class="calculator__title title-h3">Калькулятор рассчета стоимости</h2>
+	<h2 class="calculator__title title-h3">Калькулятор рассчета стоимости</h2>
 	<div class="calculator">
 
 <!-- Выпадающие списки -->			
-			<div class="calculator__options">
+			<div class="calculator__options" id="calc">
 					<div class="calculator__select">
 						<h3 class="str">Возраст</h3>
 						<div class="calculator__select_unit">
@@ -212,9 +215,9 @@
 	</div>
 
 <!-- Процедура оплаты -->
-		<h2 id="payment" class="payment__title title-h3">Процедура оплаты</h2>
+		<h2 class="payment__title title-h3">Процедура оплаты</h2>
 
-		<div class="payment">
+		<div class="payment" id="payment">
 			<div class="payment__option"><img src="images/step-1.png">Заполняете форму</div>
 			<div class="payment__arrow"><img src="images/next.png"></div>
 			<div class="payment__option"><img src="images/step-2.png">Получаете адрес для доставки собаки</div>
@@ -223,12 +226,55 @@
 			<div class="payment__arrow"><img src="images/next.png"></div>
 			<div class="payment__option"><img src="images/step-4.png">Получаете квитанцию об оплате</div>
 			<div class="payment__arrow"><img src="images/next.png"></div>
-			<div class="payment__option"><img src="images/step-5.png">Радуетесь теплу</div>
+			<div class="payment__option"><img src="images/step-5.png" >Радуетесь теплу</div>
 		</div>
 
+<!-- Выкупленные собаки -->
+
+<h2 class="slider__title" >Выкупленные нами собаки</h2>
+<div class="slider" id="portfolio">
+	<div class="fotorama" data-loop="true">
+		  <img src="images/dog-1.jpg">
+		  <img src="images/dog-2.jpg">
+		  <img src="images/dog-3.jpg">
+		  <img src="images/dog-4.jpg">
+	</div>
+</div>
+
+
+
+<!-- Отзывы -->
+<div class="testimonials" id="testimonials">	 
+<div class="container">
+	<h2 class="testimonials__header">Отзывы наших клиентов</h2>
+	<div class="testimonials__slider">
+		<div class="testimonials__block">
+			<img src="images/testimonial-1.jpg" alt="бабушка">
+			<h3>Бабуля Матрёна</h3>
+			<p>Безумно благодарна данному сервису. Жить стало значительно спокойнее и теплее.
+			Очень надеюсь что вскоре появится аналогичный сервис для котов</p>
+		</div>
+		<div class="testimonials__block">
+			<img src="images/testimonial-2.jpg" alt="кот">
+			<h3>Кот бабули Матрёны</h3>
+			<p>аываоффыаФЫВАлждлфыважываФв</p>
+		</div>
+		<div class="testimonials__block">
+			<img src="images/testimonial-3.jpg" alt="бомж">
+			<h3>Бомж-предприниматель Инакентий</h3>
+			<p>Раньше я был некем, собирал бутылки и едва сводил концы с концами. Но благодаря сервису по выкупу сабак я стал предпринимателем с многомиллионым абаротом.</p>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
 <!-- Контактная форма -->
+	<div class="form__background">
 		<div class="form">
-			<h2 class="form__title">Остались вопросы?<br> Пишите нам</h2>
+			<button class="form__close"><b>&times;</b></button>
+			<h2 class="form__title">Внесите Ваши данные</h2>
 				<div class="form__group">
 						<input class="form__input" type="text" required id="form-input-1">
 						<label class="rorm__label">Имя</label>
@@ -245,18 +291,19 @@
 			 		<button type="button" class="btn btn-primary form__button" data-toggle="modal" data-target="#exampleModal" id="form-button">Отправить</button>
 			 	</div>
 	 	</div>
+	</div>
+<div class="contact__block">
+	<h2>Оставьте заявку и получите бонус</h2>
+	<a class="form__btn contact__btn">Получить бонус 5%</a>
+</div>
 
-<!-- Модальное окно -->
+<div class="arrow">
+	<a href="#up">
+	<img src="images/up.png">
+	</a>
+</div>
 
 
-<!-- Отзывы -->
-
-	
-
-<!-- Рейтинг -->
-
-
-	
 <!-- Подвал -->
 
 	 <div class="footer">
@@ -276,7 +323,16 @@
 
 		 </footer>
 	 </div>
-	 
-	 <script type="text/javascript" src="JS/javascript.js"></script>
+
+<!-- Подключение скриптов -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+		
+
+		<!-- Подключение slick -->
+		<link rel="stylesheet" type="text/css" href="slick/slick.css">
+		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+		<script type="text/javascript" src="slick/slick.min.js"></script>
+		<script src="JS/javascript.js"></script>
 	</body>
 </html>
